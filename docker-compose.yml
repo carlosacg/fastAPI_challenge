@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+
+  web:
+    container_name: api_fast_api
+    build: .
+    volumes:
+      - .:/api_fast_api 
+    ports:
+      - "8000:8000"

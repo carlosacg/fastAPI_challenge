@@ -3,5 +3,5 @@ ALGORITHM="HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 USER_DB="postgres"
 PASSWORD_DB="un1v4ll3"
-HOST_DB="localhost"
+HOST_DB="host.docker.internal"
 DB_NAME="challenge"

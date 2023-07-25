@@ -7,6 +7,7 @@ from conf.envs import ACCESS_TOKEN_EXPIRE_MINUTES
 
 app = FastAPI()
 
+
 @app.post("/token")
 def login_for_access_token(username: str, password: str) -> Dict[str, str]:
     """
@@ -28,5 +29,11 @@ def login_for_access_token(username: str, password: str) -> Dict[str, str]:
     access_token = create_jwt_token(token_data, expires_delta=access_token_expires)
 
     return {"access_token": access_token, "token_type": "bearer"}
+
+
+@app.get("/")
+def hello_world():
+    return {"message": "OK"}
+
 
 app.include_router(people.router)
